@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="ttk.Labelframe" id="account_F">
+    <property name="cursor">arrow</property>
+    <property name="height">360</property>
+    <property name="labelanchor">n</property>
+    <property name="padding">10</property>
+    <property name="takefocus">true</property>
+    <property name="text" translatable="yes">Saavn Downloader</property>
+    <property name="width">540</property>
+    <layout manager="place">
+      <property name="anchor">nw</property>
+      <property name="height">360</property>
+      <property name="width">540</property>
+      <property name="x">0</property>
+      <property name="y">0</property>
+    </layout>
+    <child>
+      <object class="ttk.Label" id="email_L">
+        <property name="anchor">w</property>
+        <property name="background">#ffffff</property>
+        <property name="font">{Arial} 12 {bold}</property>
+        <property name="text" translatable="yes">Email</property>
+        <property name="width">9</property>
+        <layout manager="grid">
+          <property name="padx">10</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property id="0" name="pad" type="col">1</property>
+          <property id="0" name="weight" type="col">0</property>
+          <property id="0" name="minsize" type="row">0</property>
+          <property id="0" name="pad" type="row">0</property>
+          <property id="0" name="weight" type="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="email_E">
+        <property name="font">{Arial} 11 {bold}</property>
+        <property name="takefocus">true</property>
+        <property name="width">25</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">10</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property id="1" name="pad" type="col">0</property>
+          <property id="0" name="minsize" type="row">0</property>
+          <property id="0" name="pad" type="row">0</property>
+          <property id="0" name="weight" type="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="password_L">
+        <property name="anchor">w</property>
+        <property name="background">#ffffff</property>
+        <property name="font">{Arial} 12 {bold}</property>
+        <property name="text" translatable="yes">Password</property>
+        <property name="width">9</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property id="0" name="pad" type="col">1</property>
+          <property id="0" name="weight" type="col">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="password_E">
+        <property name="cursor">arrow</property>
+        <property name="font">{Arial} 11 {bold}</property>
+        <property name="show">•</property>
+        <property name="takefocus">true</property>
+        <property name="width">25</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property id="1" name="pad" type="col">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="playlist_B">
+        <property name="command">download_playlists</property>
+        <property name="text" translatable="yes">All Playlists</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+          <property id="0" name="pad" type="col">1</property>
+          <property id="0" name="weight" type="col">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="album_B">
+        <property name="command">download_albums</property>
+        <property name="text" translatable="yes">All Albums</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">e</property>
+          <property id="2" name="pad" type="col">0</property>
+          <property id="2" name="weight" type="col">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="podcast_B">
+        <property name="command">download_podcasts</property>
+        <property name="text" translatable="yes">All Podcasts</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+          <property name="sticky">w</property>
+          <property id="1" name="pad" type="col">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Progressbar" id="progressbar">
+        <property name="cursor">wait</property>
+        <property name="length">380</property>
+        <property name="mode">determinate</property>
+        <property name="orient">horizontal</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property id="0" name="pad" type="col">1</property>
+          <property id="0" name="weight" type="col">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="back_B">
+        <property name="command">back</property>
+        <property name="text" translatable="yes">Back</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+          <property name="sticky">e</property>
+          <property id="2" name="pad" type="col">0</property>
+          <property id="2" name="weight" type="col">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Message" id="filename_MB">
+        <property name="anchor">center</property>
+        <property name="background">#ffffff</property>
+        <property name="cursor">wait</property>
+        <property name="font">{Arial} 11 {bold}</property>
+        <property name="foreground">#000000</property>
+        <property name="relief">flat</property>
+        <property name="takefocus">false</property>
+        <property name="textvariable">string:filename_MTV</property>
+        <property name="width">500</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Message" id="message_1_2">
+        <property name="background">#ffffff</property>
+        <property name="cursor">arrow</property>
+        <property name="font">{Arial Black} 9 {bold}</property>
+        <property name="text" translatable="yes">Developed by : Harsh Patel</property>
+        <property name="width">500</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="padx">0</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
