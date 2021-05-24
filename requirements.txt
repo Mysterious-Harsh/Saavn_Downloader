@@ -1,0 +1,9 @@
+BeautifulSoup4
+eyed3
+urllib3
+pathlib
+requests
+mutagen
+pySmartDL
+logger
+lxml
